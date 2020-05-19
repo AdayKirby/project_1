@@ -1,13 +1,10 @@
-/**
- * salto espacio 10x
- * 
- * doble salto espacio x 2 30y
- */
-controller.A.onEvent(ControllerButtonEvent.Repeated, function () {
-    mySprite.y += 30
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    mySprite.y += -10
+    mySprite.y += 10
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    mySprite.y += 10
+    mySprite.y += -30
+    mySprite.y += 30
 })
 let mySprite: Sprite = null
 mySprite = sprites.create(img`
@@ -28,4 +25,4 @@ mySprite = sprites.create(img`
 . . . . . 7 . . . . 7 . . . . . 
 . . . . 7 7 . . . . 7 7 . . . . 
 `, SpriteKind.Player)
-controller.moveSprite(mySprite)
+controller.moveSprite(mySprite, 3, 100)
