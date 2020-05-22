@@ -1,13 +1,4 @@
-controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-    mySprite.y += -10
-    mySprite.y += 10
-})
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    mySprite.y += -30
-    mySprite.y += 30
-})
-let mySprite: Sprite = null
-mySprite = sprites.create(img`
+let mySprite = sprites.create(img`
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . 2 2 2 f 2 2 . . . . . 
@@ -25,4 +16,4 @@ mySprite = sprites.create(img`
 . . . . . 7 . . . . 7 . . . . . 
 . . . . 7 7 . . . . 7 7 . . . . 
 `, SpriteKind.Player)
-controller.moveSprite(mySprite, 3, 100)
+controller.moveSprite(mySprite)
